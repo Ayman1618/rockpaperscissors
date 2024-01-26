@@ -1,7 +1,8 @@
 import random
 
+# Randomly select an element from choices
 def random_selection(choices):
-    return random.choice(choices)  # Randomly select an element from choices
+    return random.choice(choices)  
 
 def is_winner(player_selection, computer_selection):
     if player_selection == computer_selection:
@@ -20,7 +21,7 @@ while True:
 
     if player_choice not in choices:
         print("Invalid choice. Please choose again.")
-        continue  # Go back to the beginning of the loop
+        continue      # Go back to the beginning of the loop
 
     computer_choice = random_selection(choices)
     print(f"Player's choice: {player_choice.capitalize()}")
@@ -32,4 +33,4 @@ while True:
     play_again = input("Do you want to play again? (yes/no): ").lower()
     if play_again != "yes":
         print("Thank you for playing. Exiting the program.")
-        break  # Exit the loop and end the program
+        break      # Exit the loop and end the program
